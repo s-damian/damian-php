@@ -2,22 +2,23 @@
 
 ## Méthodes
 
-| Type de retour | Nom | Description |
-| ------- | -------------- | ----------- |
-| void | __construct(array $options = []) | Constructeur |
-| void | paginate(int $count) | Active la pagination |
-| int | getLimit() | LIMIT : Nombre d'éléments à récupérer (sur la page en cours) |
-| int | getOffset() | À partir d'où on débute le LIMIT |
-| string | render() | Rendre le rendu de la pagination au format HTML |
-| string | perPage() | Rendre le rendu du par page au format HTML |
-| int | getCount() | Nombre d'éléments sur lesquels paginer |
-| int | getCountOnCurrentPage() | Nombre d'éléments sur la page en cours |
-| int | getFrom() | Pour retourner l'indexation du premier élément sur la page en cours |
-| int | getTo() | Pour retourner l'indexation du dernier élément sur la page en cours |
-| int | getCurrentPage() | Page en cours |
-| int | getNbPages() | Nombre de pages |
-| int | getPerPage() | Le nombre d'éléments affichés par page |
-| bool | hasMorePages() | True si il reste des pages après celle en cours |
+| Return type | Name                             | Description                                                                             |
+| ----------- | -------------------------------- | --------------------------------------------------------------------------------------- |
+| void        | __construct(array $options = []) | Constructor                                                                             |
+| void        | paginate(int $count)             | (to use in the Controller) Activate the pagination                                      |
+| null or int | getLimit()                       | (to use in the Controller) LIMIT: Number of items to retrieve                           |
+| null or int | getOffset()                      | (to use in the Controller) OFFSET: From where you start the LIMIT                       |
+| string      | render()                         | (to use in the View) Make the rendering of the pagination in HTML format                |
+| string      | perPage(array $options = [])     | (to use in the view) Make the rendering of the per page in HTML format                  |
+| int         | getCount()                       | (to use wherever you want) Number of items on which we make the pagination              |
+| int         | getCountOnCurrentPage()          | (to use wherever you want) Number of items on the current page                          |
+| int         | getFrom()                        | (to use wherever you want) To return the indexing of the first item to the current page |
+| int         | getTo()                          | (to use wherever you want) To return the indexing of the last item to the current page  |
+| int         | getCurrentPage()                 | (to use wherever you want) Current page                                                 |
+| int         | getNbPages()                     | (to use wherever you want) Number of pages                                              |
+| bool        | hasMorePages()                   | (to use wherever you want) True if there are pages after that current page              |
+| bool        | isFirstPage()                    | (to use wherever you want) True if the current page is the first page                   |
+| bool        | isLastPage()                     | (to use wherever you want) True if the current page is the last page                    |
 
 
 

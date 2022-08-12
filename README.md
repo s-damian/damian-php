@@ -28,6 +28,12 @@ The kernel source codes for this Framework are in this package:
 
 ## Getting Started
 
+### Requirements
+
+* PHP >= 8.1
+
+### Ccreate a new project
+
 * You can create a new project via the **composer create-project** command:
 ```
 composer create-project s-damian/damian-php example-app-name
