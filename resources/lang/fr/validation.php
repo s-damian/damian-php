@@ -1,0 +1,141 @@
+<?php
+
+/**
+ * Validation - Français
+ */
+
+return [
+
+    /**
+     * Messages de confirmation des validations
+     */
+    'success_message' => 'Le formulaire a bien été validé.',
+
+    /**
+     * Messages d'erreurs des validations
+     */
+    'alpha' => 'Le champ "{field}" doit contenir uniquement des carratères alphabétique sans acctents et sans carractères spéciaux.',
+    'alpha_numeric' => 'Le champ "{field}" doit contenir uniquement des carratères alphanumériques.',
+    'between' => 'Le champ "{field}" doit être avoir une valeur comrise entre {value_0} et {value_1}.',
+    'confirm' => 'Les champs "{field}" et "Confirmation du {field}" doivent être identiques.',
+    'date_time_not_after_now' => 'Le champ "{field}" ne peut pas être + vielle que la date courante.',
+    'empty' => 'Le champ "{field}" doit rester vide.',
+    'format_date' => 'Le champ "{field}" doit avoir comme valeur le format d\'une date (jj/mm/aaaa).',
+    'format_date_time' => 'Le champ "{field}" doit avoir comme valeur le format d\'une date/heure (jj/mm/aaaa hh:mm).',
+    'format_email' => 'Le champ "{field}" doit avoir comme valeur le format d\'une adresse mail.',
+    'format_ip' => 'Le champ "{field}" doit avoir comme valeur le format d\'une adresse IP.',
+    'format_name_file' => 'Un nom de fichier ne peut pas contenir d\'espace, de caractere speciaux, ou les caractères suivants: \ / : * ? " < > |',
+    'format_postal_code' => 'Le champ "{field}" doit avoir comme valeur le format d\'un code postal.',
+    'format_slug' => 'Le champ "{field}" n\'est pas au bon format.',
+    'format_tel' => 'Le champ "{field}" doit avoir comme valeur le format d\'un numéro de téléphone.',
+    'format_url' => 'Le champ "{field}" doit avoir le format d\'une URL.',
+    'integer' => 'Le champ "{field}" doit être un entier.',
+    'in_array' => 'L\'option séléctionné n\'est pas valide pour "{field}".',
+    'max' => 'Le champ "{field}" ne doit pas ne doit pas dépasser {value} caractères.',
+    'min' => 'Le champ "{field}" ne doit pas être inférieur à {value} caractères.',
+    'name_directory_unique_in_directory' => 'Le nom de "{field}" est déjà pris par un autre dossier dans ce répertoire.',
+    'name_file_unique_in_directory' => 'Le nom de "{field}" est déjà pris par un autre fichier dans ce répertoire.',
+    'no_regex' => 'Le champ "{field}" ne doit pas avoir en valeur un format avec le regex "{value}"',
+    'not_in_array' => 'Le champ "{field}" est invalide',
+    'password_current_ok' => 'Mot de passe saisi incorrect !',
+    'regex' => 'Le champ "{field}" doit avoir comme valeur un format avec le regex "{value}"',
+    'required' => 'Le champ "{field}" est requis.',
+    'unique' => 'Le champs "{field}" est déjà pris est doit être unique.',
+    'unique_not_in_array' => 'Le champ "{field}" est déjà pris est doit être unique.',
+    
+    /**
+     * Messages d'erreurs des validations pour les uploads
+     */
+    'file' => [
+        'error' => 'Erreur avec l\'upload de "{field}"',
+        'extension_audio' => 'L\'extension de "{field}" doit etre une extension d\'un fichier audio.',
+        'extension_doc' => 'L\'extension de "{field}" doit être celle d\'un fichier Excel ou du même style.',
+        'extension_file' => 'Extension de "{field}" non autorisée !',
+        'extension_image' => 'L\'extension de "{field}" doit etre une extension d\'image.',
+        'extension_video' => 'L\'extension de "{field}" doit etre une extension d\'une video.',
+        'format_name' => 'Un nom de fichier ne peut pas contenir d\'espace, de caractere speciaux, ou les caractères suivants: \ / : * ? " < > |',
+        'max_length_name' => 'Le nom de "{field}" ne doit pas dépasser "{value}" carractères.',
+        'max_size' => 'Le poids de "{field}" ne doit pas être suppérieur "{value}" à octets.',
+        'name_not_taken' => 'Ce nom est déjà pris par un autre fichier dans ce répertoire.',
+        'required' => 'Vous devez séléctionner un fichier.',
+        'specific_name' => 'Le fichier doit etre nommé "{value}".',
+        'upload_canceled' => 'L\'upload a donc été entierement annulé.',
+        'upload_err_nofile' => 'Aucun fichier n\'a été téléchargé.',
+        'upload_err_size' => 'La limite de taille de fichier dépassée.',
+    ],
+
+    /**
+     * Attributs de validation personnalisés
+     */
+    'labels' => [
+        "address" => "Adresse",
+        'address_street' => 'Rue',
+        'address_postal_code' => 'Code postal',
+        'address_city' => 'Ville',
+        'address_department' => 'Département',
+        'address_region' => 'Région',
+        'address_country' => 'Pays',
+        "age" => "Age",
+        "authorize_comments" => "Autoriser les commentaires ?",
+        "available" => "Disponible",
+        "category" => "Categorie",
+        "city" => "Ville",
+        "close_new_comments" => "Fermer les nouveaux commentaires ?",
+        "comment" => "Commentaire",
+        "confirmed" => "Confirmé",
+        "content" => "Contenu",
+        "country" => "Pays",
+        "date" => "Date",
+        "description" => "Description",
+        "day" => "Jour",
+        "directory" => "dossier",
+        "directory_name" => "Nom du dossier",
+        "email" => "E-mail",
+        "emails_confirmed" => "Emails validés",
+        "email_to" => "Destintaire des Emails",
+        "email_from" => "Expéditeur des Emails",
+        "emails_prohibited" => "Emails bannis",
+        "excerpt" => "Extrait",
+        "file" => "Fichier",
+        "file_avatar" => "Avatar",
+        "file_image'" => "Image de présentation",
+        "file_related" => "Fichier joint",
+        "file_logo" => "Logo",
+        "first_name" => "Prénom",
+        "full_address" => "Adresse complète",
+        "gender" => "Genre",
+        "h1" => "Titre H1",
+        "hour" => "Heure",
+        "is_indexable" => "Indéxable ?",
+        "last_name" => "Nom",
+        "minute" => "Minute",
+        "mobile" => "Téléphone Portable",
+        "month" => "Mois",
+        "name" => "Nom",
+        "subject" => "Sujet",
+        "subdirectory" => "Sous-dossier",
+        "subdirectory_where_upload" => "Dans quel sous-dossier uploader le(s) fichier(s)",
+        "subdirectory_where_create_directory" => "Dans quel sous-dossier créer ce dossier",
+        "password" => "Mot de passe",
+        "password_confirmation" => "Confirmation du mot de passe",
+        "password_confirm" => "Confirmation du mot de passe",
+        "password_current" => "Mot de passe actuel",
+        "phone" => "Téléphone",
+        "published_at" => "Date de publication",
+        "starting_date" => "Date de commencement",
+        "status" => "Statut",
+        "size" => "Taille",
+        "summary" => "Chapô",
+        "tel" => "TEL",
+        "time" => "Heure",
+        "title" => "Titre",
+        "second" => "Seconde",
+        "sex" => "Sexe",        
+        "username" => "Pseudo",
+        "website" => "Site web",
+        "website_type" => "Type de site web",
+        "year" => "Année",
+        "your_budget" => "Votre budget",
+    ],
+    
+];

@@ -1,0 +1,29 @@
+AddDefaultCharset UTF-8
+
+<IfModule mod_rewrite.c>
+    # -Multiviews : Pour que si on tape index, que hebergeur n'essaye pas d'aller vers index.php ou index.html
+    # -Indexes : Désactiver le listing des dossier "index of" qui n'ont pas de fichier index.php
+    Options -MultiViews -Indexes
+
+    # Activation de l'url rewitting
+    RewriteEngine on
+
+    # Interdire sans www
+    RewriteCond %{HTTP_HOST} !^www\. [NC]
+    RewriteCond %{HTTP_HOST} !^localhost$ [NC]
+    RewriteRule ^(.*)$ http://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Interdire HTTP (forcer HTTPS)
+    #RewriteCond %{HTTPS} !=on
+    #RewriteCond %{HTTP_HOST} !^localhost$ [NC]
+    #RewriteCond %{HTTP_HOST} !^(.*)\.local$ [NC]
+    #RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
+
+    # Front controller
+    # Vérifier que URL saisie est ni un dossier, ni un fichier qui existe physiquement, ni un lien symbolique ...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-l
+    # ... si URL saisie n'existe pas physiquement, on peut faire la ré-écriture
+    RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>
