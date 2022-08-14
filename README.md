@@ -81,8 +81,8 @@ An example of a route listing:
 ```php
 <?php
 
-Router::group(['namespace' => 'Front\\'], function () {
-    Router::group(['prefix' => 'blog'], function () {
+Router::group(['namespace' => 'Front\\', 'prefix' => 'website'], function () {
+    Router::group(['prefix' => '/blog'], function () {
         Router::get(
             '',
             'Article@index',
