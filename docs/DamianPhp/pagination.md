@@ -2,23 +2,24 @@
 
 ## Méthodes
 
-| Return type | Name                             | Description                                                                             |
-| ----------- | -------------------------------- | --------------------------------------------------------------------------------------- |
-| void        | __construct(array $options = []) | Constructor                                                                             |
-| void        | paginate(int $count)             | (to use in the Controller) Activate the pagination                                      |
-| null or int | getLimit()                       | (to use in the Controller) LIMIT: Number of items to retrieve                           |
-| null or int | getOffset()                      | (to use in the Controller) OFFSET: From where you start the LIMIT                       |
-| string      | render()                         | (to use in the View) Make the rendering of the pagination in HTML format                |
-| string      | perPage(array $options = [])     | (to use in the view) Make the rendering of the per page in HTML format                  |
-| int         | getCount()                       | (to use wherever you want) Number of items on which we make the pagination              |
-| int         | getCountOnCurrentPage()          | (to use wherever you want) Number of items on the current page                          |
-| int         | getFrom()                        | (to use wherever you want) To return the indexing of the first item to the current page |
-| int         | getTo()                          | (to use wherever you want) To return the indexing of the last item to the current page  |
-| int         | getCurrentPage()                 | (to use wherever you want) Current page                                                 |
-| int         | getNbPages()                     | (to use wherever you want) Number of pages                                              |
-| bool        | hasMorePages()                   | (to use wherever you want) True if there are pages after that current page              |
-| bool        | isFirstPage()                    | (to use wherever you want) True if the current page is the first page                   |
-| bool        | isLastPage()                     | (to use wherever you want) True if the current page is the last page                    |
+| Return type | Method                           | Description                                                               |
+| ----------- | -------------------------------- | ------------------------------------------------------------------------- |
+| void        | __construct(array $options = []) | Constructor.                                                              |
+| void        | paginate(int $count)             | (to use in the Controller) Activate the pagination.                       |
+| null or int | getLimit()                       | (to use in the Controller) LIMIT: Number of items to retrieve.            |
+| null or int | getOffset()                      | (to use in the Controller) OFFSET: From where you start the LIMIT.        |
+| int         | getCount()                       | Determine the total number of matching items in the data store.           |
+| int         | getCountOnCurrentPage()          | Determine the total number of matching item on the current page.          |
+| int         | getFrom()                        | Get the result number of the first item in the results.                   |
+| int         | getTo()                          | Get the result number of the last item in the results.                    |
+| int         | getCurrentPage()                 | Get the current page number.                                              |
+| int         | getNbPages()                     | Get the page number of the last available page (number of pages).         |
+| bool        | hasPages()                       | Determine if there are enough items to split into multiple pages.         |
+| bool        | hasMorePages()                   | Determine if there are more items in the data store.                      |
+| bool        | isFirstPage()                    | Determine if the paginator is on the first page.                          |
+| bool        | isLastPage()                     | Determine if the paginator is on the last page.                           |
+| string      | render()                         | (to use in the View) Make the rendering of the pagination in HTML format. |
+| string      | perPage(array $options = [])     | (to use in the view) Make the rendering of the per page in HTML format.   |
 
 
 
@@ -146,7 +147,7 @@ Lors de la création de l'objet Pagination, vous pouvez passer un tableaux d'opt
 
 // Nombre d'éléments par page
 $pagination = new Pagination(['pp'=>20]);
-// Est à 10 par défaut
+// Est à 15 par défaut
 
 // Nombre de liens aux cotés de la page courante
 $pagination = new Pagination(['number_links'=>3]);
@@ -160,7 +161,7 @@ $pagination = new Pagination(['options_select'=>[5, 10, 50, 100, 500, 'all']]);
 
 // Pour changer le style CSS de la pagination (mettre une autre class CSS que celle par défaut)
 $pagination = new Pagination(['css_class_p'=>'name-css-class-of-pagintion']);
-// La class CSS se nomme par défaut "block-pagination"
+// La class CSS se nomme par défaut "pagination"
 
 // Pour changer le style CSS du lien actif (page courante)
 $pagination = new Pagination(['css_class_link_active'=>'name-css-class-of-active-link']);
