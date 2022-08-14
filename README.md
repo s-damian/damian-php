@@ -96,7 +96,6 @@ Router::group(['namespace' => 'Front\\', 'prefix' => 'website'], function () {
     });
 });
 ```
-PS: you can nest multiple **Router::group** within each other.
 
 Retrieve a URL with the name of a route:
 ```php
