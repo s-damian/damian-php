@@ -211,6 +211,6 @@ You can add custom validation rules. Example:
 <?php
 
 Validator::extend('strictly_equal', function ($input_name, $input_value, $parameters) {
-    return ((string) $input_value === (string) $parameters);
+    return (string) $input_value === (string) $parameters;
 });
 ```
