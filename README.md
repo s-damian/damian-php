@@ -96,6 +96,7 @@ Router::group(['namespace' => 'Front\\'], function () {
     });
 });
 ```
+PS: You can nest multiple **Router::group** within each other.
 
 Retrieve a URL with the name of a route:
 ```php
@@ -203,4 +204,13 @@ public function update(Validator $validator, int $id)
         $validator->getErrorsHtml();
     }
 }
+```
+
+You can add custom validation rules. Example:
+```php
+<?php
+
+Validator::extend('strictly_equal', function ($input_name, $input_value, $parameters) {
+    return ((string) $input_value === (string) $parameters);
+});
 ```
