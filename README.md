@@ -96,7 +96,7 @@ Router::group(['namespace' => 'Front\\'], function () {
     });
 });
 ```
-PS: You can nest multiple **Router::group** within each other.
+PS: you can nest multiple **Router::group** within each other.
 
 Retrieve a URL with the name of a route:
 ```php
