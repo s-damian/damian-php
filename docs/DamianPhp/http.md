@@ -280,6 +280,12 @@ Request::getMethodsAllowedForInputMethod();
 // return string - Méthode utilisée pour accéder à la page. 'GET', 'POST', 'PUT', 'PATCH', 'DELETE', etc.
 Request::getMethod();
 
+// return string - L'URL courante (sans les éventuels query params)
+Request::getUrlCurrent();
+
+// return string - L'URL courante (avec les éventuels query params)
+Request::getFullUrlWithQuery();
+
 
 
 // Méthodes magiques avec instance :
@@ -313,9 +319,6 @@ Server::getServerName();
 
 // return string - Contenu de l'en-tête Host: de la requête courante, si elle existe
 Server::getHttpHost();
-
-// return string - L'URL courant (sans les éventuels query params)
-Server::getUrlCurrent();
 
 // return string - Nom de domaien(sans "www.")
 Server::getDomainName();

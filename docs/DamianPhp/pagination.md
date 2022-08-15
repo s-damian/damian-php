@@ -1,25 +1,32 @@
 # use DamianPhp\Pagination\Pagination;
 
-## Méthodes
+## Pagination Instance Methods
 
-| Return type | Method                           | Description                                                               |
-| ----------- | -------------------------------- | ------------------------------------------------------------------------- |
-| void        | __construct(array $options = []) | Constructor.                                                              |
-| void        | paginate(int $count)             | (to use in the Controller) Activate the pagination.                       |
-| null or int | getLimit()                       | (to use in the Controller) LIMIT: Number of items to retrieve.            |
-| null or int | getOffset()                      | (to use in the Controller) OFFSET: From where you start the LIMIT.        |
-| int         | getCount()                       | Determine the total number of matching items in the data store.           |
-| int         | getCountOnCurrentPage()          | Determine the total number of matching item on the current page.          |
-| int         | getFrom()                        | Get the result number of the first item in the results.                   |
-| int         | getTo()                          | Get the result number of the last item in the results.                    |
-| int         | getCurrentPage()                 | Get the current page number.                                              |
-| int         | getNbPages()                     | Get the page number of the last available page (number of pages).         |
-| bool        | hasPages()                       | Determine if there are enough items to split into multiple pages.         |
-| bool        | hasMorePages()                   | Determine if there are more items in the data store.                      |
-| bool        | isFirstPage()                    | Determine if the paginator is on the first page.                          |
-| bool        | isLastPage()                     | Determine if the paginator is on the last page.                           |
-| string      | render()                         | (to use in the View) Make the rendering of the pagination in HTML format. |
-| string      | perPage(array $options = [])     | (to use in the view) Make the rendering of the per page in HTML format.   |
+| Return type    | Method                           | Description                                                               |
+| -------------- | -------------------------------- | ------------------------------------------------------------------------- |
+| void           | __construct(array $options = []) | Constructor.                                                              |
+| void           | paginate(int $count)             | (to use in the Controller) Activate the pagination.                       |
+| null or int    | getLimit()                       | (to use in the Controller) LIMIT: Number of items to retrieve.            |
+| null or int    | getOffset()                      | (to use in the Controller) OFFSET: From where you start the LIMIT.        |
+| int            | getCount()                       | Determine the total number of matching items in the data store.           |
+| int            | getCountOnCurrentPage()          | Determine the total number of matching item on the current page.          |
+| int            | getFrom()                        | Get the result number of the first item in the results.                   |
+| int            | getTo()                          | Get the result number of the last item in the results.                    |
+| int            | getCurrentPage()                 | Get the current page number.                                              |
+| int            | getNbPages()                     | Get the page number of the last available page (number of pages).         |
+| int            | getPerPage()                     | The number of items to be shown per page.                                 |
+| bool           | hasPages()                       | Determine if there are enough items to split into multiple pages.         |
+| bool           | hasMorePages()                   | Determine if there are more items in the data store.                      |
+| bool           | isFirstPage()                    | Determine if the paginator is on the first page.                          |
+| bool           | isLastPage()                     | Determine if the paginator is on the last page.                           |
+| bool           | isPage(int $pageNb)              | Determine if the paginator is on a given page number                      |
+| null or string | getPreviousPageUrl()             | Get the URL for the previous page.                                        |
+| null or string | getNextPageUrl()                 | Get the URL for the next page.                                            |
+| string         | getFirstPageUrl()                | Get the URL for the first page.                                           |
+| string         | getLastPageUrl()                 | Get the URL for the last page.                                            |
+| int            | getUrl(int $pageNb)              | Get the URL for a given page number.                                      |
+| string         | render()                         | (to use in the View) Make the rendering of the pagination in HTML format. |
+| string         | perPageForm(array $options = []) | (to use in the view) Make the rendering of the per page in HTML format.   |
 
 
 
@@ -43,7 +50,7 @@ $offset = $pagination->getOffset();
 // Ici votre listage d'éléments avec une boucle
 
 echo $pagination->render();
-echo $pagination->perPage();
+echo $pagination->perPageForm();
 ```
 
 
@@ -92,7 +99,7 @@ foreach (findElements($limit, $offset) as $article) {
 // Afficher la Pagination
 echo $pagination->render();
 // Afficher un "per page" (utile pour choisir nombre d'éléments à afficher par page)
-echo $pagination->perPage();
+echo $pagination->perPageForm();
 ```
 La fonction "db()" doit retourner le résultat de la connexion à une base de donnée (le résultat d'une instance de PDO par exemple).
 Mais vous n'êtes pas obligé de créer un fonction "db()", vous pouvez utiliser cette librairie avec un ORM par exemple.
@@ -134,7 +141,7 @@ foreach ($files as $file) {
 // Afficher la Pagination
 echo $pagination->render();
 // Afficher un "per page" (utile pour choisir nombre d'éléments à afficher par page)
-echo $pagination->perPage();
+echo $pagination->perPageForm();
 ```
 
 
@@ -153,7 +160,7 @@ $pagination = new Pagination(['pp'=>20]);
 $pagination = new Pagination(['number_links'=>3]);
 // Est à 5 par défaut
 
-// The otpions of the select TAG to be possibly generated with perPage()
+// The otpions of the select TAG to be possibly generated with perPageForm()
 $pagination = new Pagination(['options_select'=>[5, 10, 50, 100, 500, 'all']]);
 // La valeur de 'options_select' doit être un tableaux.
 // Seul des nombres entiers et 'all' sont autorisés.
@@ -199,11 +206,11 @@ Pour afficher un select pour que le visiteur puisse avoir le choix du nombre d'�
 <?php
 
 // return string
-echo $pagination->perPage();
+echo $pagination->perPageForm();
 
-// En paramètre de cette méthode, on peut préciser l'action du formulaire. Exemple :
-echo $pagination->perPage('action_url');
-// Si vous ne le faite pas, l'action prendra par défaut comme valeur $_SERVER['REQUEST_URI'].
+// En paramètre (options) de cette méthode, on peut préciser l'action du formulaire. Exemple :
+echo $pagination->perPageForm(['action' => 'action_url']);
+// Si vous ne le faite pas, l'action prendra par défaut comme valeur Request::getUrlCurrent()
 ```
 
 
