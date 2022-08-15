@@ -414,8 +414,8 @@ foreach ($articles as $article) {
     echo $article->title;
 }
 
-echo $pagination->render();  // return string
-echo $pagination->perPage();  // return string
+echo $pagination->render(); // return string
+echo $pagination->perPageForm(); // return string
 ```
 Le paramètre de la méthode paginate() est ut est optionnel.
 Ceci est utilise pour choisir le nombre d'élément à afficher par page.

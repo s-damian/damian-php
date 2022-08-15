@@ -161,7 +161,7 @@ foreach ($articles as $article) {
 }
 
 echo $pagination->render();
-echo $pagination->perPage();
+echo $pagination->perPageForm();
 ```
 
 ### Pagination
@@ -179,7 +179,7 @@ $offset = $pagination->getOffset();
 // Here your list of items with a loop.
 
 echo $pagination->render();
-echo $pagination->perPage();
+echo $pagination->perPageForm();
 ```
 
 ### Validation
