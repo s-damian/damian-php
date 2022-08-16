@@ -24,7 +24,7 @@
 | null or string | getNextPageUrl()                 | Get the URL for the next page.                                            |
 | string         | getFirstPageUrl()                | Get the URL for the first page.                                           |
 | string         | getLastPageUrl()                 | Get the URL for the last page.                                            |
-| int            | getUrl(int $pageNb)              | Get the URL for a given page number.                                      |
+| string         | getUrl(int $pageNb)              | Get the URL for a given page number.                                      |
 | string         | render()                         | (To use in the View) Make the rendering of the pagination in HTML format. |
 | string         | perPageForm(array $options = []) | (To use in the view) Make the rendering of the per page in HTML format.   |
 
