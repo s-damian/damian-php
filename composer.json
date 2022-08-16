@@ -28,10 +28,10 @@
     },
     "scripts": {
         "test": [
-            "php ./vendor/phpunit/phpunit/phpunit"
+            "php8.1 ./vendor/phpunit/phpunit/phpunit"
         ],
         "test-class": [
-            "php ./vendor/phpunit/phpunit/phpunit --filter"
+            "php8.1 ./vendor/phpunit/phpunit/phpunit --filter"
         ]
     },
     "minimum-stability": "dev",
