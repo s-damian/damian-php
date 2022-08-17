@@ -5,6 +5,7 @@
 </p>
 
 <p align="center">
+<a href="https://github.com/s-damian/damian-php/actions/workflows/tests.yml"><img src="https://github.com/s-damian/damian-php/actions/workflows/tests.yml/badge.svg" alt="Tests"></a>
 <a href="https://packagist.org/packages/s-damian/damian-php"><img src="https://img.shields.io/packagist/v/s-damian/damian-php" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/s-damian/damian-php"><img src="https://img.shields.io/packagist/l/s-damian/damian-php" alt="License"></a>
 </p>
