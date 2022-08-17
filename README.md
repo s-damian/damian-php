@@ -45,7 +45,9 @@ composer create-project s-damian/damian-php example-app-name
 
 ```
 cd /your-path/example-app-name
+```
 
+```
 cp .env.example .env
 ```
 
