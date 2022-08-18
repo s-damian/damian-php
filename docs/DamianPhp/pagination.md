@@ -175,8 +175,8 @@ $pagination = new Pagination(['css_class_link_active'=>'name-css-class-of-active
 // La class CSS se nomme par défaut "active"
 
 // Pour changer le style CSS du par page (select) (mettre un autre id CSS que celui par défaut)
-$pagination = new Pagination(['css_id_pp'=>'name-css-id-of-per-page']);
-// L'ID CSS se nomme par défaut "per-page"
+$pagination = new Pagination(['css_id_pp'=>'name-css-id-of-per-page-form']);
+// L'ID CSS se nomme par défaut "per-page-form"
 ```
 
 
