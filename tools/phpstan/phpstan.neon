@@ -6,6 +6,3 @@ parameters:
     - "../../resources/lang"
     - "../../routes"
     - "../../tests"
-  excludePaths:
-    
-  ignoreErrors:
