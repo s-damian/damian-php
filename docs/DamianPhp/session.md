@@ -56,7 +56,7 @@ Session::regenerateId();
 echo Flash::get('key');
 
 // Créer un message flash de validation
-Flash::setOk('Article publié !');
+Flash::setSuccess('Article publié !');
 
 // Créer un message flash d'erreur
 Flash::setError('Erreur !');

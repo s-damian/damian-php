@@ -49,7 +49,7 @@ $this->middleware('mdw');
 $this->middleware(['mdw1', 'mdw1']);
 
 // Message flash de confirmation avant redirection
-$this->withOk('Message de confirmation')->redirect(route('name_route'));
+$this->withSuccess('Message de confirmation')->redirect(route('name_route'));
 
 // Message flash aves les erreurs avant redirection
 $this->withErrors($this->validator->getErrors())->redirect(route('name_route'));
