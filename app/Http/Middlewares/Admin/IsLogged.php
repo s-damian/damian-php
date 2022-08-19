@@ -22,13 +22,11 @@ class IsLogged
     {
         $isConnected = new IsConnected(User::class);
 
-        $isConnected->session(config('_session.admin_auth'), ['id', 'role', 'username', 'first_name'], ['id', 'role'])
+        $isConnected->session('admin_user', ['id', 'role', 'username', 'first_name'], ['id', 'role'])
             ->cookie('remember_admin')
             ->urlToredirectIfFalse(route('admin_login'));
 
         if (!$isConnected->isLogged()) {
-            Session::put(config('_session.admin_url_back'), Helper::getActiveUrl());
-
             $isConnected->exit();
         }
     }

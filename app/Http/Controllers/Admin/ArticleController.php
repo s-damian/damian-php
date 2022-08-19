@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Article;
 use DamianPhp\Validation\Validator;
 use App\Http\Controllers\Controller;
+use DamianPhp\Exception\ExceptionHandler;
 use DamianPhp\Support\Facades\Input;
 use DamianPhp\Support\Facades\Request;
 
@@ -20,6 +21,9 @@ class ArticleController extends Controller
         $this->setLayout('admin');
     }
 
+    /**
+     * Route GET /admin/articles
+     */
     public function index()
     {
         $articles = Article::load()
@@ -31,11 +35,17 @@ class ArticleController extends Controller
         ]);
     }
 
+    /**
+     * Route GET /admin/articles/create
+     */
     public function create()
     {
         return $this->view('admin/article/create');
     }
 
+    /**
+     * Route POST /admin/articles/create
+     */
     public function store(Validator $validator)
     {
         $validator->rules([ // Add your rules in the array.
@@ -58,12 +68,15 @@ class ArticleController extends Controller
             $article->fill(Request::getPost()->all());
             $article->save();
 
-        // Success. Redirect or JSON response...
+            // Success. Redirect or JSON response...
         } else {
             // Error. Redirect or JSON response...
         }
     }
 
+    /**
+     * Route GET /admin/articles/{id}/edit
+     */
     public function edit(int $id)
     {
         $article = Article::load()->findOrFail($id);
@@ -73,6 +86,9 @@ class ArticleController extends Controller
         ]);
     }
 
+    /**
+     * Route PUT /admin/articles/{id}/edit
+     */
     public function update(Validator $validator, int $id)
     {
         $article = Article::load()->findOrFail($id);
@@ -96,12 +112,15 @@ class ArticleController extends Controller
             $article->fill(Request::getPost()->all());
             $article->save();
 
-        // Success. Redirect or JSON response...
+            // Success. Redirect or JSON response...
         } else {
             // Error. Redirect or JSON response...
         }
     }
 
+    /**
+     * Route DELETE /admin/articles/{id}/destroy
+     */
     public function destroy(int $id)
     {
         $article = Article::load()->findOrFail($id);

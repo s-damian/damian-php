@@ -25,10 +25,10 @@ return [
      */
     'resource_path' => [
         'index' => '',
-        'create' => 'ajouter',
+        'create' => 'create',
         'show' => '',
         'edit' => 'edit',
-        'destroy' => 'supprimer',
+        'destroy' => 'destroy',
     ],
 
 ];

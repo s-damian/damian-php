@@ -31,7 +31,11 @@ if (Helper::isMultilingual()) {
 
 // # Errors
 Router::group(['namespace' => 'Error\\'], function () {
-    require_once __DIR__.'/includes/errors.php';
+    Router::get(
+        '404',
+        'Error@error404',
+        ['name' => 'error404']
+    );
 });
 
 // # Front
@@ -85,3 +89,69 @@ Router::group(['namespace' => 'Front\\'], function () {
         );
     });
 });
+
+// # Admin
+Router::group(['prefix' => 'admin', 'namespace' => 'Admin\\'], function () {
+    // # Auth
+    Router::group(['namespace' => 'Auth\\'], function () {
+        // ## Login
+        Router::get(
+            '/login',
+            'Login@login',
+            ['name' => 'admin_login']
+        );
+        Router::post(
+            '/login',
+            'Login@postLogin'
+        );
+
+        // ## Logout
+        Router::get(
+            '/logout',
+            'Logout@logout',
+            ['name' => 'admin_logout']
+        );
+
+        // ## Forgot
+        Router::get(
+            '/forgot',
+            'Forgot@forgot',
+            ['name' => 'admin_forgot']
+        );
+        Router::post(
+            '/forgot',
+            'Forgot@postForgot'
+        );
+
+        // ## Reset
+        Router::get(
+            '/reset/{id}/{key}',
+            'Reset@reset',
+            ['name' => 'admin_reset']
+        );
+        Router::post(
+            '/reset/{id}/{key}',
+            'Reset@postReset'
+        );
+    });
+
+    Router::group(['middleware' => ['verify_csfr_token', 'admin_is_logged']], function () {
+        // ## Admin homepage
+        Router::get(
+            '/home',
+            'Home@home',
+            ['name' => 'admin_home']
+        );
+
+        // ## Articles
+        Router::group(['prefix' => '/articles'], function () {
+            // - 'Article': is the Controller.
+            // - 'prefix_name': is the prefix of routes that this resource will generate.
+            // - 'except': because in our controller Article, we don't have the "show" action.
+            Router::resource('Article', ['prefix_name' => 'admin_article_', 'except' => ['show']]);
+        });
+    });
+});
+
+// If you want to see all your routes:
+//echo '<pre>'; var_dump( Router::getRoutes() ); die;
