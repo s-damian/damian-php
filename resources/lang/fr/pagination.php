@@ -5,7 +5,7 @@
  */
 
 return [
-    
+
     'all' => 'Tous',
     'first' => 'Début',
     'last' => 'Fin',

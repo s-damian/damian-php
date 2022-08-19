@@ -56,7 +56,7 @@ return [
         'format_name' => 'A file name can not contain space, special character, or the following characters: \ / : * ? " < > |',
         'max_length_name' => 'The name of "{field}" must not exceed {value__max_length_name} characteres.',
         'max_size' => 'The weight of "{field}" must not be supperior {value__max_size} to bytes.',
-        'name_not_taken' => 'This name is already taken by another file in this directory.',  
+        'name_not_taken' => 'This name is already taken by another file in this directory.',
         'required' => 'You must select an file.',
         'specific_name' => 'The file must be named "{value__specific_name}".',
         'upload_canceled' => 'The upload has been donated entirely canceled.',
@@ -71,5 +71,5 @@ return [
         "first_name" => "First Name",
         "last_name" => "Last Name",
     ],
-    
+
 ];

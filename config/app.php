@@ -7,7 +7,7 @@
 */
 
 return [
-    
+
     /**
      * Application Environment.
      * Supported: 'local', 'preprod', 'production', 'testing'.
@@ -29,14 +29,14 @@ return [
      * string
      */
     'url' => env('APP_URL', 'http://localhost'),
-    
+
     /**
      * Application Timezone
      *
      * string
      */
     'timezone' => 'Europe/Paris',
-    
+
     /**
      * Default charset.
      *

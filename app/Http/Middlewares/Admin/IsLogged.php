@@ -10,7 +10,7 @@ use DamianPhp\Support\Facades\Session;
 /**
  * This is an example of Middleware.
  * This is useful if you want to add an Admin protected by authentication.
- * 
+ *
  * Check that visitor is an authenticated member of the Admin.
  */
 class IsLogged

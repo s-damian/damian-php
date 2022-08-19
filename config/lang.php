@@ -109,5 +109,5 @@ return [
      * associative array
      */
     //'subdomain_languages' => ['aus.' => 'en'],
-    
+
 ];

@@ -54,7 +54,7 @@ class Article extends BaseModel
     {
         $articles = [];
 
-        for ($i=1; $i <= 5; $i++) { 
+        for ($i=1; $i <= 5; $i++) {
             $article = new self();
             $article->id = $i;
             $article->title = 'Title '.$i;
@@ -63,8 +63,8 @@ class Article extends BaseModel
             $article->slug = 'slug-'.$i;
 
             $articles[] = $article;
-        }    
-    
+        }
+
         return $articles;
     }
 }

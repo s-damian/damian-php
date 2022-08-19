@@ -13,11 +13,11 @@ use DamianPhp\Support\Facades\Router;
 */
 
 // # Lang
-if (Helper::isMultilingual()) {    
+if (Helper::isMultilingual()) {
     // pour rediriger vers : domain.com/lang/ (si pas de Lang précisé dans l'URL)
     if (config('lang.address_structure') === 'subdirectories') {
         Router::trans(true);
-        
+
         if (Cookie::has('lang')) {
             Router::setDefaultLang(Cookie::get('lang'));
         }

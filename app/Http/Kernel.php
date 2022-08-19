@@ -30,7 +30,7 @@ class Kernel extends HttpKernel
      */
     protected array $routeMiddleware = [
         'verify_csfr_token' => \App\Http\Middlewares\VerifyCsrfToken::class,
-        
+
         // Admin (This is an example of Middleware. This is useful if you want to add an Admin protected by authentication) :
         'admin_is_logged' => [\App\Http\Middlewares\Admin\IsLogged::class, 'isConnected'],
     ];

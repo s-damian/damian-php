@@ -5,8 +5,8 @@
  */
 
 return [
-    
+
     'button' => 'Envoyer',
     'submit' => 'Envoyer',
-    
+
 ];

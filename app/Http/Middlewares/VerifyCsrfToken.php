@@ -21,7 +21,7 @@ class VerifyCsrfToken
      * If form sent by POST method -> Check the token.
      */
     private function tokenPost(): void
-    {       
+    {
         if (Request::isInMethods(['POST', 'PUT', 'PATCH', 'DELETE'])) {
             CsrfToken::verifyPost();
         }

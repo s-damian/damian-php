@@ -28,5 +28,5 @@ return [
      * string
      */
     'email_error_from' => env('EMAIL_EMAIL_ERROR_FROM'),
-    
+
 ];

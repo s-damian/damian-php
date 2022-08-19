@@ -25,7 +25,7 @@ class ArticleController extends Controller
         $articles = Article::load()
             ->select('title, description, content')
             ->findAll();
-        
+
         return $this->view('admin/article/index', [
             'articles' => $articles,
         ]);
@@ -58,7 +58,7 @@ class ArticleController extends Controller
             $article->fill(Request::getPost()->all());
             $article->save();
 
-            // Success. Redirect or JSON response...
+        // Success. Redirect or JSON response...
         } else {
             // Error. Redirect or JSON response...
         }
@@ -76,7 +76,7 @@ class ArticleController extends Controller
     public function update(Validator $validator, int $id)
     {
         $article = Article::load()->findOrFail($id);
-        
+
         $validator->rules([ // Add your rules in the array.
             'title' => ['max' => 190, 'required' => true],
             'description' => ['max' => 190, 'required' => true],
@@ -96,7 +96,7 @@ class ArticleController extends Controller
             $article->fill(Request::getPost()->all());
             $article->save();
 
-            // Success. Redirect or JSON response...
+        // Success. Redirect or JSON response...
         } else {
             // Error. Redirect or JSON response...
         }

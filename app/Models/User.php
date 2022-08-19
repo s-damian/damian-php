@@ -83,7 +83,7 @@ class User extends BaseModel
      * Type varchar(255) - Null no
      */
     public string $password;
-    
+
     /**
      * Type varchar(255) - Null yes
      */

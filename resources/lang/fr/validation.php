@@ -42,7 +42,7 @@ return [
     'required' => 'Le champ "{field}" est requis.',
     'unique' => 'Le champs "{field}" est déjà pris est doit être unique.',
     'unique_not_in_array' => 'Le champ "{field}" est déjà pris est doit être unique.',
-    
+
     /**
      * Messages d'erreurs des validations pour les uploads
      */
@@ -130,12 +130,12 @@ return [
         "time" => "Heure",
         "title" => "Titre",
         "second" => "Seconde",
-        "sex" => "Sexe",        
+        "sex" => "Sexe",
         "username" => "Pseudo",
         "website" => "Site web",
         "website_type" => "Type de site web",
         "year" => "Année",
         "your_budget" => "Votre budget",
     ],
-    
+
 ];
