@@ -25,7 +25,7 @@ class LoginController extends Controller
 
     /**
      * Route GET /admin/login
-     * 
+     *
      * Show login view.
      */
     public function login()

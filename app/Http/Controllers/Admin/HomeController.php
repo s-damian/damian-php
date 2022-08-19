@@ -12,7 +12,7 @@ class HomeController extends Controller
 
         $this->setLayout('admin');
     }
-    
+
     /**
      * Route GET /admin/home
      */

@@ -23,7 +23,7 @@ class ResetController extends Controller
 
     /**
      * Route GET /reset/{id}/{key}
-     * 
+     *
      * Show reset view.
      *
      * @param int $id - Id de l'user
@@ -34,7 +34,8 @@ class ResetController extends Controller
         $result = User::load()->select('id')->where('id', '=', $id)->where('key_reset', '=', Security::hash($key))->find();
 
         if (! $result) {
-            return getError404();
+            getError404();
+            return;
         }
 
         return $this->view('admin/auth/reset', compact('id', 'key'));
@@ -42,7 +43,7 @@ class ResetController extends Controller
 
     /**
      * Route POST /reset/{id}/{key}
-     * 
+     *
      * Traitement du reset
      *
      * @param int $id - Id de l'user
