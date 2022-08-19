@@ -110,7 +110,7 @@ Retrieve a URL with the name of a route:
 
 #### Active Record Pattern
 
-Example to insert an article:
+Example to insert an article (using the **setters** magic methods):
 ```php
 <?php
 
