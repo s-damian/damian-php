@@ -31,7 +31,7 @@ class LoginController extends Controller
     public function login()
     {
         // If the user is already connected: send him back to the admin homepage.
-        if (Session::has('admin_user')) {
+        if (Session::has('user_admin')) {
             return $this->redirect(route('admin_home'));
         }
 
@@ -69,14 +69,14 @@ class LoginController extends Controller
             return $this->withErrors('Incorrect Username or Password.')->login();
         } else {
             $auth = new Auth(User::class);
-            $auth->remember('remember_admin')->connect('admin_user', [
+            $auth->remember('remember_admin')->connect('user_admin', [
                 'id' => (int) $result->id,
                 'role' => (int) $result->role,
                 'username' => $result->username,
                 'first_name' => $result->first_name,
             ]);
 
-            return $this->withSuccess('You just logged in as "'.Security::e(Session::get('admin_user')['username']).'".')
+            return $this->withSuccess('You just logged in as "'.Security::e(Session::get('user_admin')['username']).'".')
                 ->redirect(route('admin_home'));
         }
     }

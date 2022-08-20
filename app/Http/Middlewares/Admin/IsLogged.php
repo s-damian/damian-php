@@ -20,7 +20,7 @@ class IsLogged
     {
         $isConnected = new IsConnected(User::class);
 
-        $isConnected->session('admin_user', ['id', 'role', 'username', 'first_name'], ['id', 'role'])
+        $isConnected->session('user_admin', ['id', 'role', 'username', 'first_name'], ['id', 'role'])
             ->cookie('remember_admin')
             ->urlToredirectIfFalse(route('admin_login'));
 

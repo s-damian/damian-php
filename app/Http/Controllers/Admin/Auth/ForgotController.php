@@ -35,7 +35,7 @@ class ForgotController extends Controller
     public function forgot()
     {
         // If the user is already connected: send him back to the admin homepage.
-        if (Session::has('admin_user')) {
+        if (Session::has('user_admin')) {
             return $this->redirect(route('admin_home'));
         }
 

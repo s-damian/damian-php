@@ -19,9 +19,9 @@ class LogoutController extends Controller
     public function logout()
     {
         if (Cookie::has('remember_admin')) {
-            if (Session::has('admin_user')) {
+            if (Session::has('user_admin')) {
                 User::load()
-                    ->where('username', '=', Session::get('admin_user')['username'])
+                    ->where('username', '=', Session::get('user_admin')['username'])
                     ->limit(1)
                     ->update(['remember_token' => null]);
             }
