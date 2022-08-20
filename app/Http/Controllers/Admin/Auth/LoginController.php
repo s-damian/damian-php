@@ -71,6 +71,7 @@ class LoginController extends Controller
             $auth = new Auth(User::class);
             $auth->remember('remember_admin')->connect('admin_user', [
                 'id' => (int) $result->id,
+                'role' => (int) $result->role,
                 'username' => $result->username,
                 'first_name' => $result->first_name,
             ]);

@@ -3,9 +3,7 @@
 namespace App\Http\Middlewares\Admin;
 
 use App\Models\User;
-use DamianPhp\Support\Helper;
 use DamianPhp\Auth\IsConnected;
-use DamianPhp\Support\Facades\Session;
 
 /**
  * This is an example of Middleware.
