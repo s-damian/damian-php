@@ -31,8 +31,8 @@
         "test": "php8.1 ./vendor/phpunit/phpunit/phpunit",
         "test-class": "php8.1 ./vendor/phpunit/phpunit/phpunit --filter",
         "phpstan": "php8.1 ./vendor/bin/phpstan --configuration='tools/phpstan/phpstan.neon'",
-        "fixer-all": "./tools/php-cs-fixer/vendor/bin/php-cs-fixer fix --config=tools/php-cs-fixer/.php-cs-fixer.dist.php",
-        "fixer-all-dry": "./tools/php-cs-fixer/vendor/bin/php-cs-fixer fix --config=tools/php-cs-fixer/.php-cs-fixer.dist.php -vv --dry-run --diff"
+        "fix-all": "./tools/php-cs-fixer/vendor/bin/php-cs-fixer fix --config=tools/php-cs-fixer/.php-cs-fixer.dist.php",
+        "fix-all-dry": "./tools/php-cs-fixer/vendor/bin/php-cs-fixer fix --config=tools/php-cs-fixer/.php-cs-fixer.dist.php -vv --dry-run --diff"
     },
     "minimum-stability": "dev",
     "prefer-stable": true

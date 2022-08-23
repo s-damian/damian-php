@@ -60,7 +60,7 @@ cp .env.example .env
 
 * You have to configure your web server (Linux / Nginx or Apache / MySQL or PostgreSQL / PHP).
 
-You have an example Nginx Vhost configuration in **/docs/nginx/vhost-example.conf** file.
+You have an example Nginx Vhost configuration in **docs/nginx/vhost-example.conf** file.
 
 
 ### After configuring your HTTP server (Nginx), you can run these demo URLs
@@ -75,7 +75,7 @@ You have an example Nginx Vhost configuration in **/docs/nginx/vhost-example.con
 
 ## Documentation
 
-* The documentation for this Framework is in **/docs/DamianPhp** folder.
+* The documentation for this Framework is in **docs/DamianPhp** folder.
 
 
 ## Syntax examples
