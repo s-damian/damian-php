@@ -16,7 +16,7 @@
 
 > A powerful PHP Framework in PHP 8.1 - Beautiful code & Elegant syntax
 
-This library is developed by [Stephen Damian](https://www.linkedin.com/in/stephen-damian/) [![Stephen Damian - LinkedIn](https://raw.githubusercontent.com/s-damian/medias/main/favicon-linkedin.png)](https://www.linkedin.com/in/stephen-damian/)
+This Framework is developed by [Stephen Damian](https://github.com/s-damian)
 
 Here you have the source codes of the skeleton.
 
@@ -37,6 +37,7 @@ The kernel source codes for this Framework are in this package:
 ### Ccreate a new project
 
 * You can create a new project via the **composer create-project** command:
+
 ```
 composer create-project s-damian/damian-php example-app-name
 ```
@@ -82,6 +83,7 @@ You have an example Nginx Vhost configuration in **/docs/nginx/vhost-example.con
 ### Routing
 
 An example of a route listing:
+
 ```php
 <?php
 
@@ -102,6 +104,7 @@ Router::group(['namespace' => 'Front\\', 'prefix' => 'website'], function () {
 ```
 
 Retrieve a URL with the name of a route:
+
 ```php
 
 <?php echo route('article_show', ['slug' => $article->slug]); ?>
@@ -112,6 +115,7 @@ Retrieve a URL with the name of a route:
 #### Active Record Pattern
 
 Example to insert an article (using the **setters** magic methods):
+
 ```php
 <?php
 
@@ -124,6 +128,7 @@ $article->save();
 ```
 
 Example to update an article (using the **fill** magic method):
+
 ```php
 <?php
 
@@ -151,6 +156,7 @@ $articles = Article::load()
 #### ORM with Pagination
 
 To paginate an item listing:
+
 ```php
 <?php
 
@@ -189,6 +195,7 @@ echo $pagination->perPageForm();
 ### Validation
 
 Validation example (you can do method injection):
+
 ```php
 <?php
 
@@ -210,6 +217,7 @@ public function update(Validator $validator, int $id)
 ```
 
 You can add custom validation rules. Example:
+
 ```php
 <?php
 
