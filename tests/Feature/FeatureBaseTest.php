@@ -14,7 +14,6 @@ class FeatureBaseTest extends AppBoot
 
     /**
      * Est appellée avant chaque testMethod() de cette classe et de classes enfants.
-     * PS : si on met un setUp() dans une classe enfant, c'est celle de la classe enfant qui sera appelé avant.
      */
     public function setUp(): void
     {
