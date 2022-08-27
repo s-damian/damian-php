@@ -16,7 +16,7 @@
 
 > A powerful PHP Framework in PHP 8.1 - Beautiful code & Elegant syntax
 
-This Framework is developed by [Stephen Damian](https://github.com/s-damian)
+This **Open Source Framework** is developed by [Stephen Damian](https://github.com/s-damian)
 
 Here you have the source codes of the ```skeleton```.
 
