@@ -148,7 +148,7 @@ Example using the ```when``` magic method:
 
 $articles = Article::load()
     ->select('title, description, content')
-    ->where('id', '!=', 1)
+    ->where('slug', '!=', 'article-2')
     ->when((int) Input::get('status') === 1, function ($query) {
         return $query->where('status', '=', 1);
     })
