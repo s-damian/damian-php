@@ -12,7 +12,7 @@
         }
     ],
     "require": {
-        "php": ">=8.1",
+        "php": "^8.1",
         "s-damian/damian-php-fw": "^1.0",
         "vlucas/phpdotenv": "5.3.*",
         "swiftmailer/swiftmailer": "6.3.*"
@@ -30,7 +30,7 @@
     "scripts": {
         "test": "php8.1 ./vendor/phpunit/phpunit/phpunit",
         "test-f": "php8.1 ./vendor/phpunit/phpunit/phpunit --filter",
-        "phpstan": "php8.1 ./vendor/bin/phpstan --configuration='tools/phpstan/phpstan.neon'",
+        "phpstan": "php8.2 ./vendor/bin/phpstan --configuration='tools/phpstan/phpstan.neon'",
         "fix-all": "./tools/php-cs-fixer/vendor/bin/php-cs-fixer fix --config=tools/php-cs-fixer/.php-cs-fixer.dist.php",
         "fix-all-dry": "./tools/php-cs-fixer/vendor/bin/php-cs-fixer fix --config=tools/php-cs-fixer/.php-cs-fixer.dist.php -vv --dry-run --diff"
     },

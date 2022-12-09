@@ -34,7 +34,7 @@ The ```kernel``` source codes for this Framework are in this package:
 
 ### Requirements
 
-* PHP >= 8.1
+* PHP 8.1 || 8.2
 
 ### Ccreate a new project
 
