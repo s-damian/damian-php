@@ -35,6 +35,7 @@ class ResetController extends Controller
 
         if (! $result) {
             getError404();
+
             return;
         }
 
@@ -67,7 +68,7 @@ class ResetController extends Controller
                 'min'=>5,
                 'max'=>64,
                 'required'=>true,
-                'confirm'=>[Input::post('password'),Input::post('password_confirm')]
+                'confirm'=>[Input::post('password'), Input::post('password_confirm')]
             ],
             'password_confirm' => ['required'=>true],
         ]);

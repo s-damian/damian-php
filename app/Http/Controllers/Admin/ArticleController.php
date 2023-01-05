@@ -58,7 +58,7 @@ class ArticleController extends Controller
                 'format_slug' => true,
                 'unique' => [
                     'model' => Article::class,
-                    'where' => [['slug','=',Input::post('slug')]],
+                    'where' => [['slug', '=', Input::post('slug')]],
                 ],
             ],
         ]);

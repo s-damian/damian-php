@@ -24,7 +24,7 @@ class IsLogged
             ->cookie('remember_admin')
             ->urlToredirectIfFalse(route('admin_login'));
 
-        if (!$isConnected->isLogged()) {
+        if (! $isConnected->isLogged()) {
             $isConnected->exit();
         }
     }
