@@ -9,16 +9,6 @@ use DamianPhp\Database\BaseModel;
  */
 class Article extends BaseModel
 {
-    /**
-     * The attributes that are mass assignable.
-     */
-    protected array $fillable = [
-        'title',
-        'description',
-        'content',
-        'slug',
-    ];
-
     /*
     |--------------------------------------------------------------------------
     | Columns:
@@ -49,6 +39,16 @@ class Article extends BaseModel
      * Type varchar(255) - Null no - Index unique key.
      */
     public string $slug;
+
+    /**
+     * The attributes that are mass assignable.
+     */
+    protected array $fillable = [
+        'title',
+        'description',
+        'content',
+        'slug',
+    ];
 
     public static function getFakeArticles(): array
     {

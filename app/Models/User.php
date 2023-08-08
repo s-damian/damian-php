@@ -9,17 +9,6 @@ use DamianPhp\Database\BaseModel;
  */
 class User extends BaseModel
 {
-    /**
-     * Les attributs qui sont assignables en masse.
-     */
-    protected array $fillable = [
-        'email',
-        'first_name',
-        'last_name',
-        'tel',
-        'username',
-    ];
-
     /*
     |--------------------------------------------------------------------------
     | Columns:
@@ -98,4 +87,15 @@ class User extends BaseModel
      * Type varchar(255) - Null no - Index unique key
      */
     public string $username;
+
+    /**
+     * Les attributs qui sont assignables en masse.
+     */
+    protected array $fillable = [
+        'email',
+        'first_name',
+        'last_name',
+        'tel',
+        'username',
+    ];
 }
