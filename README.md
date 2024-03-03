@@ -112,7 +112,7 @@ Retrieve a URL with the name of a route:
 <?php echo route('article_show', ['slug' => $article->slug]); ?>
 ```
 
-### ORM (compatible with MySQL and PostgreSQL)
+### ORM (compatible with MySQL / MariaDB and PostgreSQL)
 
 #### Active Record Pattern
 
