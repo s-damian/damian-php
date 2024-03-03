@@ -28,11 +28,11 @@
         }
     },
     "scripts": {
-        "test": "php8.1 ./vendor/phpunit/phpunit/phpunit",
-        "test-f": "php8.1 ./vendor/phpunit/phpunit/phpunit --filter",
-        "phpstan": "php8.2 ./vendor/bin/phpstan --configuration='tools/phpstan/phpstan.neon'",
-        "fix-all": "php8.1 ./tools/php-cs-fixer/vendor/bin/php-cs-fixer fix --config=tools/php-cs-fixer/.php-cs-fixer.dist.php",
-        "fix-all-dry": "php8.1 ./tools/php-cs-fixer/vendor/bin/php-cs-fixer fix --config=tools/php-cs-fixer/.php-cs-fixer.dist.php -vv --dry-run --diff"
+        "test": "php8.3 ./vendor/phpunit/phpunit/phpunit",
+        "test-f": "php8.3 ./vendor/phpunit/phpunit/phpunit --filter",
+        "phpstan": "php8.3 ./vendor/bin/phpstan --configuration='tools/phpstan/phpstan.neon'",
+        "fix-all": "php8.2 ./tools/php-cs-fixer/vendor/bin/php-cs-fixer fix --config=tools/php-cs-fixer/.php-cs-fixer.dist.php",
+        "fix-all-dry": "php8.2 ./tools/php-cs-fixer/vendor/bin/php-cs-fixer fix --config=tools/php-cs-fixer/.php-cs-fixer.dist.php -vv --dry-run --diff"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
