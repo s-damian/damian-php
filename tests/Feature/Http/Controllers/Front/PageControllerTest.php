@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\FeatureHttp\Controllers\Front;
 
 use Tests\Feature\FeatureBaseTest;

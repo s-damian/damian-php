@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use DamianPhp\Support\Helper;
 use DamianPhp\Support\Facades\Json;
 use DamianPhp\Support\Facades\Input;

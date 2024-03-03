@@ -1,6 +1,6 @@
 <?php
 
-use DamianPhp\Support\Facades\Server;
+declare(strict_types=1);
 
 /*
 |--------------------------------------------------------------------------
