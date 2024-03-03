@@ -14,7 +14,7 @@
 
 # Damian PHP Framework - Skeleton
 
-> A powerful PHP Framework in PHP 8.2 - Beautiful code & Elegant syntax
+> A powerful PHP Framework in PHP 8.3 - Beautiful code & Elegant syntax
 
 > Compatible with MySQL / MariaDB / PostgreSQL
 
@@ -34,7 +34,7 @@ The ```kernel``` source codes for this Framework are in this package:
 
 ### Requirements
 
-* PHP 8.1 || 8.2
+* PHP 8.1 || 8.2 || 8.3
 
 ### Ccreate a new project
 
