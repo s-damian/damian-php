@@ -101,6 +101,11 @@ Router::group(['namespace' => 'Front\\', 'prefix' => 'website'], function () {
             'Article@show',
             ['name' => 'article_show']
         );
+        Router::post(
+            '/contact',
+            'Contact@sendMail',
+            ['name' => 'contact_send-mail']
+        );
     });
 });
 ```
