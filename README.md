@@ -90,6 +90,11 @@ An example of a route listing:
 <?php
 
 Router::group(['namespace' => 'Front\\', 'prefix' => 'website'], function () {
+    Router::post(
+        '/contact',
+        'Contact@sendMail',
+        ['name' => 'contact_send-mail']
+    );
     Router::group(['prefix' => '/blog'], function () {
         Router::get(
             '',
@@ -100,11 +105,6 @@ Router::group(['namespace' => 'Front\\', 'prefix' => 'website'], function () {
             '/{slug}',
             'Article@show',
             ['name' => 'article_show']
-        );
-        Router::post(
-            '/contact',
-            'Contact@sendMail',
-            ['name' => 'contact_send-mail']
         );
     });
 });
