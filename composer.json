@@ -1,7 +1,7 @@
 {
     "name": "s-damian/damian-php",
     "type": "project",
-    "description": "The Damian PHP Framework.",
+    "description": "The skeleton application for the Damian PHP Framework.",
     "keywords": ["framework", "damian-php", "DamianPhp"],
     "license": "MIT",
     "authors": [
