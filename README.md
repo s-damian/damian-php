@@ -36,7 +36,7 @@ The ```kernel``` source codes for this Framework are in this package:
 
 * PHP 8.1 || 8.2 || 8.3
 
-### Ccreate a new project
+### Create a new project
 
 * You can create a new project via the ```composer create-project``` command:
 
