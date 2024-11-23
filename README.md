@@ -14,18 +14,18 @@
 
 # Damian PHP Framework - Skeleton
 
-> A powerful PHP Framework in **PHP 8.3** - Beautiful code & Elegant syntax
+> A powerful PHP Framework in **PHP 8.4** - Beautiful code & Elegant syntax
 
 > SGBDR: Compatible with **MySQL** / **MariaDB** / **PostgreSQL**
 
 This **Open Source Framework** is developed by [Stephen Damian](https://github.com/s-damian)
 
-Here you have the source codes of the ```skeleton```.
+Here you have the source codes of the `skeleton`.
 
 
 ### Kernel source code
 
-The ```kernel``` source codes for this Framework are in this package:
+The `kernel` source codes for this Framework are in this package:
 
 [Damian PHP Framework - Kernel - [damian-php-fw]](https://github.com/s-damian/damian-php-fw)
 
@@ -34,11 +34,11 @@ The ```kernel``` source codes for this Framework are in this package:
 
 ### Requirements
 
-* PHP 8.1 || 8.2 || 8.3
+* PHP `8.2` || `8.3` || `8.4`
 
 ### Create a new project
 
-* You can create a new project via the ```composer create-project``` command:
+* You can create a new project via the `composer create-project` command:
 
 ```
 composer create-project s-damian/damian-php example-app-name
@@ -46,7 +46,7 @@ composer create-project s-damian/damian-php example-app-name
 
 ### Configuration
 
-* Create your ```.env``` file:
+* Create your `.env` file:
 
 ```
 cd /your-path/example-app-name
@@ -56,13 +56,13 @@ cd /your-path/example-app-name
 cp .env.example .env
 ```
 
-* You have to configure the ```.env``` file.
+* You have to configure the `.env` file.
 
 ### Configuration - HTTP Server
 
 * You have to configure your web server (Linux / Nginx or Apache / MySQL or PostgreSQL / PHP).
 
-You have an example Nginx Vhost configuration in ```docs/nginx/vhost-example.conf``` file.
+You have an example Nginx Vhost configuration in `docs/nginx/vhost-example.conf` file.
 
 
 ### After configuring your HTTP server (Nginx), you can run these demo URLs
@@ -77,7 +77,7 @@ You have an example Nginx Vhost configuration in ```docs/nginx/vhost-example.con
 
 ## Documentation
 
-* The documentation for this Framework is in ```docs/DamianPhp``` folder.
+* The documentation for this Framework is in `docs/DamianPhp` folder.
 
 
 ## Syntax examples
@@ -121,7 +121,7 @@ Retrieve a URL with the name of a route:
 
 #### Active Record Pattern
 
-Example to insert an article (using the ```setters``` magic methods):
+Example to insert an article (using the `setters` magic methods):
 
 ```php
 <?php
@@ -134,7 +134,7 @@ $article->setSlug('slug-1');
 $article->save();
 ```
 
-Example to update an article (using the ```fill``` magic method):
+Example to update an article (using the `fill` magic method):
 
 ```php
 <?php
@@ -146,7 +146,7 @@ $article->save();
 
 #### Fetch multiple rows
 
-Example using the ```when``` magic method:
+Example using the `when` magic method:
 
 ```php
 <?php
