@@ -14,7 +14,7 @@
 
 # Damian PHP Framework - Skeleton
 
-> A powerful PHP Framework in **PHP 8.4** - Beautiful code & Elegant syntax
+> A powerful PHP Framework in **PHP 8.5** - Beautiful code & Elegant syntax
 
 > SGBDR: Compatible with **MySQL** / **MariaDB** / **PostgreSQL**
 
