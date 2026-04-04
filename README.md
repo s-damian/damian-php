@@ -12,6 +12,11 @@
 </p>
 
 
+<p align="center">
+🛠️ 100% handcrafted code (no LLMs were used)
+</p>
+
+
 # Damian PHP Framework - Skeleton
 
 > A powerful PHP Framework in **PHP 8.5** - Beautiful code & Elegant syntax
@@ -26,8 +31,6 @@ The Framework `kernel` is in this package:
 ### Author
 
 This **Open Source Framework** is developed by [Stephen Damian](https://github.com/s-damian)
-
-🛠️ 100% handcrafted code (no LLMs were used)
 
 
 ## Getting Started
